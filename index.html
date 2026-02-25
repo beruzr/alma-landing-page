@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alma - La mutuelle qui te comprend</title>
+    <meta name="description" content="La mutuelle santé pensée pour la Gen Z : simple, rapide, pas relou.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <!-- Logo -->
+                <button class="nav-logo" onclick="scrollToSection('#hero')">
+                    <div class="logo-icon">
+                        <span>A</span>
+                    </div>
+                    <span class="logo-text">ALMA</span>
+                </button>
+
+                <!-- Desktop Nav -->
+                <div class="nav-links">
+                    <button class="nav-link" onclick="scrollToSection('#hero')">Accueil</button>
+                    <button class="nav-link" onclick="scrollToSection('#pourquoi')">Pourquoi Alma</button>
+                    <button class="nav-link" onclick="scrollToSection('#contexte')">Contexte</button>
+                    <button class="nav-link" onclick="scrollToSection('#features')">Fonctionnalités</button>
+                    <button class="nav-link" onclick="scrollToSection('#tarifs')">Tarifs</button>
+                    <button class="nav-link" onclick="scrollToSection('#avis')">Avis</button>
+                    <button class="nav-link" onclick="scrollToSection('#faq')">FAQ</button>
+                </div>
+
+                <!-- CTA Desktop -->
+                <div class="nav-cta">
+                    <button class="btn btn-primary" onclick="scrollToSection('#tarifs')">
+                        Je m'inscris — 16€/mois
+                    </button>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="mobile-toggle" id="mobileToggle" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menuIcon"></i>
+                    <i data-lucide="x" id="closeIcon" style="display: none;"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-content">
+            <button class="mobile-nav-link" onclick="scrollToSection('#hero')">Accueil</button>
+            <button class="mobile-nav-link" onclick="scrollToSection('#pourquoi')">Pourquoi Alma</button>
+            <button class="mobile-nav-link" onclick="scrollToSection('#contexte')">Contexte</button>
+            <button class="mobile-nav-link" onclick="scrollToSection('#features')">Fonctionnalités</button>
+            <button class="mobile-nav-link" onclick="scrollToSection('#tarifs')">Tarifs</button>
+            <button class="mobile-nav-link" onclick="scrollToSection('#avis')">Avis</button>
+            <button class="mobile-nav-link" onclick="scrollToSection('#faq')">FAQ</button>
+            <button class="btn btn-primary btn-lg mobile-cta" onclick="scrollToSection('#tarifs')">
+                Je m'inscris — 16€/mois
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <!-- Background -->
+        <div class="hero-bg"></div>
+
+        <!-- Floating Shapes -->
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+
+        <div class="hero-container">
+            <div class="hero-grid">
+                <!-- Text Content -->
+                <div class="hero-content animate-fade-in-left">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Nouvelle génération de mutuelle
+                    </div>
+
+                    <h1 class="hero-title">
+                        La mutuelle qui te parle
+                        <span class="hero-title-highlight">
+                            vraiment
+                            <svg class="underline-svg" viewBox="0 0 200 12" fill="none">
+                                <path d="M2 10C50 2 150 2 198 10" stroke="#00B0C4" stroke-width="4"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </span>.
+                    </h1>
+
+                    <p class="hero-description">
+                        Mutuelle simple, remboursements clairs, pharmacie livrée et chatbot pour t'expliquer tout — sans
+                        jargon.
+                        <span class="hero-price">16€ / mois.</span>
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button class="btn btn-white btn-lg" onclick="scrollToSection('#tarifs')">
+                            Je m'inscris — 16€/mois
+                        </button>
+                        <button class="btn btn-outline-white btn-lg" onclick="scrollToSection('#features')">
+                            Voir les fonctionnalités
+                        </button>
+                    </div>
+
+                    <!-- Trust Bar -->
+                    <div class="trust-bar">
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <span>Remboursements rapides</span>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <span>Chat 24/7</span>
+                        </div>
+                        <div class="trust-item">
+                            <div class="trust-icon">
+                                <i data-lucide="truck"></i>
+                            </div>
+                            <span>Livraison pharmacie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Illustration -->
+                <div class="hero-illustration animate-fade-in-right">
+                    <div class="illustration-card floating">
+                        <div class="illustration-content">
+                            <!-- Person on Couch -->
+                            <div class="illustration-scene">
+                                <!-- Couch -->
+                                <div class="couch"></div>
+                                <div class="couch-cushion"></div>
+
+                                <!-- Person -->
+                                <div class="person">
+                                    <div class="person-head"></div>
+                                    <div class="person-hair"></div>
+                                    <div class="person-body"></div>
+                                    <div class="person-arm-left"></div>
+                                    <div class="person-arm-right"></div>
+                                </div>
+
+                                <!-- Package -->
+                                <div class="package floating-small">
+                                    <span>📦</span>
+                                    <div class="package-check">✓</div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Elements -->
+                            <div class="floating-badge badge-reimbursed floating-alt">
+                                <span class="badge-amount">+48€</span>
+                                <span class="badge-label">remboursé</span>
+                            </div>
+
+                            <div class="floating-badge badge-delivery floating-small">
+                                <div class="delivery-icon">
+                                    <i data-lucide="truck"></i>
+                                </div>
+                                <span>Livré en 2h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Wave -->
+        <div class="hero-wave">
+            <svg viewBox="0 0 1440 120" fill="none">
+                <path
+                    d="M0 120L60 110C120 100 240 80 360 70C480 60 600 60 720 65C840 70 960 80 1080 85C1200 90 1320 90 1380 90L1440 90V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V120Z"
+                    fill="white" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- Storytelling Section -->
+    <section class="stories" id="stories">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">
+                    Des histoires comme <br>
+                    <span class="underline-decoration">la tienne</span>
+                </h2>
+                <p class="section-subtitle">On connaît ces moments. On les a vécus aussi. C'est pour ça qu'on a créé
+                    Alma.</p>
+            </div>
+
+            <div class="stories-list">
+                <!-- Story 1 -->
+                <div class="story-card">
+                    <div class="story-visual">
+                        <div class="visual-container">
+                            <img src="assets/sick-person.jpg" alt="Malade" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; z-index: 0;">
+                            <div class="mini-app-preview" style="background: transparent; box-shadow: none; position: relative; z-index: 1;">
+                                <div class="bar bar-1 bg-accent-medium"></div>
+                                <div class="bar bar-2 bg-accent-medium"></div>
+                                <div class="btn-pill bg-secondary">Commander mes médocs →</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">"J'ai 22 ans, je suis cloué au lit."</h3>
+                        <p class="story-text">Tu tousses, t'es KO, impossible de sortir chercher des médocs.</p>
+                        <p class="story-text">Avec Alma, tu ouvres l'app → tu commandes tes médicaments → tu te fais
+                            livrer.</p>
+                        <p class="story-text">Tu restes sous ta couette.</p>
+                        <p class="story-conclusion text-secondary">Alma gère.</p>
+                    </div>
+                </div>
+
+                <!-- Story 2 -->
+                <div class="story-card reverse">
+                    <div class="story-visual">
+                        <div class="visual-container">
+                            <img src="assets/doctor.jpg" alt="Médecin" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; z-index: 0;">
+                            <div class="mini-app-preview" style="background: transparent; box-shadow: none; position: relative; z-index: 1;">
+                                <div class="bar bar-1 bg-primary-medium"></div>
+                                <div class="bar bar-2 bg-primary-medium"></div>
+                                <div class="btn-pill bg-primary">Trouver un médecin →</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">"Je sais pas vers qui me tourner."</h3>
+                        <p class="story-text">Tu as besoin d'un médecin, mais tu ne sais pas lequel, ni où, ni comment
+                            prendre RDV.</p>
+                        <p class="story-text">Sur Alma, tu trouves directement des médecins conventionnés et approuvés.
+                        </p>
+                        <p class="story-text">Tu réserves en 10 secondes.</p>
+                        <p class="story-conclusion text-primary">Sans stress.</p>
+                    </div>
+                </div>
+
+                <!-- Story 3 -->
+                <div class="story-card">
+                    <div class="story-visual">
+                        <div class="visual-container">
+                            <img src="assets/refunds.jpg" alt="Remboursements" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; z-index: 0;">
+                            <div class="mini-app-preview" style="background: transparent; box-shadow: none; position: relative; z-index: 1;">
+                                <div class="bar bar-1 bg-secondary-medium"></div>
+                                <div class="bar bar-2 bg-secondary-medium"></div>
+                                <div class="btn-pill bg-secondary">Voir mes remboursements →</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3 class="story-title">"Les remboursements ? Je comprends rien."</h3>
+                        <p class="story-text">T'es jeune, t'as autre chose à faire que décoder des lignes de mutuelle.
+                        </p>
+                        <p class="story-text">Alma te montre ce que tu vas être remboursé, quand tu vas l'être, et
+                            t'envoie un rappel quand c'est fait.</p>
+                        <p class="story-conclusion text-secondary">Simple, clair, automatique.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stories-footer text-center">
+                <div class="quote-box">
+                    <p>"Peu importe la situation, tu te connectes… <span class="text-primary">et Alma fait le
+                            reste.</span>"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill-simple">Tout ce dont tu as besoin</span>
+                <h2 class="section-title">Une app qui <span class="text-secondary">simplifie</span> tout</h2>
+                <p class="section-subtitle">Pas de jargon, pas de paperasse. Juste les features dont t'as vraiment
+                    besoin.</p>
+            </div>
+
+            <div class="features-layout">
+                <div class="features-visual fade-in-right">
+                    <div class="phone-frame">
+                        <div class="notch"></div>
+                        <div class="screen">
+                            <!-- App Header -->
+                            <div class="app-header">
+                                <div>
+                                    <p class="text-xs text-gray">Bonjour 👋</p>
+                                    <p class="text-lg font-bold">Léa</p>
+                                </div>
+                                <div class="app-avatar">L</div>
+                            </div>
+
+                            <!-- Next RDV Card -->
+                            <div class="app-card mb-4">
+                                <p class="text-xs text-gray mb-1">Ton prochain RDV</p>
+                                <p class="font-semibold text-sm">Dr. Martin - Généraliste</p>
+                                <p class="text-xs text-secondary">Demain, 14h30</p>
+                            </div>
+
+                            <!-- Actions Grid -->
+                            <div class="app-grid mb-4">
+                                <div class="app-action bg-primary">
+                                    <div class="text-2xl mb-2">💊</div>
+                                    <p class="text-sm font-medium">Pharmacie</p>
+                                    <p class="text-xs opacity-80">Livraison express</p>
+                                </div>
+                                <div class="app-action bg-secondary">
+                                    <div class="text-2xl mb-2">🩺</div>
+                                    <p class="text-sm font-medium">Médecins</p>
+                                    <p class="text-xs opacity-80">Près de chez toi</p>
+                                </div>
+                            </div>
+
+                            <!-- Refund Card -->
+                            <div class="app-card bg-surface">
+                                <div class="flex-between mb-2">
+                                    <p class="text-sm font-medium">Remboursement</p>
+                                    <span class="badge-success">Reçu ✓</span>
+                                </div>
+                                <p class="text-2xl font-bold text-primary">32,50 €</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Notifications -->
+                    <div class="floating-notif notif-1">
+                        <div class="icon-circle bg-green-light">✓</div>
+                        <div>
+                            <p class="text-sm font-bold">Remboursé !</p>
+                            <p class="text-xs text-gray">Il y a 2 min</p>
+                        </div>
+                    </div>
+
+                    <div class="floating-notif notif-2">
+                        <div class="icon-circle bg-accent">📦</div>
+                        <div>
+                            <p class="text-sm font-bold">Livraison en cours</p>
+                            <p class="text-xs text-gray">~15 min</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-grid">
+                    <!-- Feature 1 -->
+                    <div class="feature-card">
+                        <div class="feature-icon bg-primary-light text-primary">
+                            <i data-lucide="stethoscope"></i>
+                        </div>
+                        <h3>Médecins conventionnés</h3>
+                        <p>Pour que tu sois toujours bien accompagné.</p>
+                        <div class="feature-link text-primary">En savoir plus →</div>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="feature-card">
+                        <div class="feature-icon bg-secondary-light text-secondary">
+                            <i data-lucide="truck"></i>
+                        </div>
+                        <h3>Pharmacie livrée</h3>
+                        <p>Même quand t'es KO.</p>
+                        <div class="feature-link text-secondary">En savoir plus →</div>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="feature-card">
+                        <div class="feature-icon bg-primary-light text-primary">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <h3>Historique médical</h3>
+                        <p>Plus de documents perdus.</p>
+                        <div class="feature-link text-primary">En savoir plus →</div>
+                    </div>
+                    <!-- Feature 4 -->
+                    <div class="feature-card">
+                        <div class="feature-icon bg-secondary-light text-secondary">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <h3>Remboursements en temps réel</h3>
+                        <p>Finito les prises de tête.</p>
+                        <div class="feature-link text-secondary">En savoir plus →</div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button class="btn btn-text text-primary">Explorer l'app →</button>
+                </div>
+            </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <!-- Background Blobs -->
+        <div class="pricing-blob pricing-blob-1"></div>
+        <div class="pricing-blob pricing-blob-2"></div>
+        <div class="pricing-blob pricing-blob-3"></div>
+
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill-simple">Tarifs</span>
+                <h2 class="section-title">Un prix unique. <span class="text-secondary">Tout compris.</span></h2>
+                <p class="section-subtitle">Pas de surprise, pas de frais cachés. Juste une couverture au top.</p>
+            </div>
+
+            <div class="pricing-wrapper">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Pour toi</h3>
+                        <div class="pricing-price">16€<span class="period">/mois</span></div>
+                        <p class="pricing-subtitle">Et c'est tout.</p>
+                    </div>
+
+                    <div class="pricing-highlight">
+                        <i data-lucide="heart" class="icon-sm"></i>
+                        <span><strong>0€</strong> pour tes ayants-droits (enfants, conjoint...)</span>
+                    </div>
+
+                    <ul class="pricing-features">
+                        <li><i data-lucide="check" class="text-success"></i> Couverture complète</li>
+                        <li><i data-lucide="check" class="text-success"></i> Remboursements en 48h</li>
+                        <li><i data-lucide="check" class="text-success"></i> Téléconsultation illimitée</li>
+                        <li><i data-lucide="check" class="text-success"></i> Pas de délai de carence</li>
+                        <li><i data-lucide="check" class="text-success"></i> Résiliable à tout moment</li>
+                    </ul>
+
+                    <button class="btn btn-primary btn-lg w-full">Je m'inscris en 2 min</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Ta vie + Alma = <span class="text-secondary relative">zéro galère <span
+                            class="sparkle-deco">✨</span></span></h2>
+                <p class="section-subtitle">Trois étapes. C'est tout ce qu'il te faut.</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div class="timeline-steps">
+                    <!-- Step 1 -->
+                    <div class="timeline-step">
+                        <div class="step-icon bg-accent-light text-secondary">
+                            <i data-lucide="smartphone"></i>
+                            <span class="step-number border-secondary text-secondary">01</span>
+                        </div>
+                        <h3>Tu ouvres l'app</h3>
+                        <p>Pas de compte compliqué, pas de formulaire sans fin. Tu te connectes et c'est parti.</p>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="timeline-step">
+                        <div class="step-icon bg-primary-light text-primary">
+                            <i data-lucide="search"></i>
+                            <span class="step-number border-primary text-primary">02</span>
+                        </div>
+                        <h3>Tu trouves ce dont tu as besoin</h3>
+                        <p>Médecin, pharmacie, remboursement... Tout est là, à portée de pouce.</p>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="timeline-step">
+                        <div class="step-icon bg-secondary-light text-secondary">
+                            <i data-lucide="sparkles"></i>
+                            <span class="step-number border-secondary text-secondary">03</span>
+                        </div>
+                        <h3>On s'occupe du reste</h3>
+                        <p>RDV confirmé, médicaments livrés, remboursement envoyé. Toi, tu profites de ta vie.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <div class="pill-box">
+                    <span class="emojis">😌 💆‍♀️ 🧘</span>
+                    <span class="font-medium text-gray-dark">Plus de stress inutile. Juste de la sérénité.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill-simple text-secondary bg-secondary-light">Ce qu'ils en disent</span>
+                <h2 class="section-title">La communauté <span class="text-primary">Alma</span></h2>
+                <p class="section-subtitle">Des vrais avis, de vraies personnes, de vraies expériences.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar bg-primary">L</div>
+                        <div>
+                            <p class="font-bold">Léa M.</p>
+                            <p class="text-sm text-gray">23 ans</p>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p class="testimonial-text">"Franchement j'étais sceptique au début, genre encore une app santé...
+                        Mais là c'est vraiment différent. J'ai commandé mes médocs un dimanche soir malade comme pas
+                        possible, livrés en 30 min. Game changer."</p>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar bg-secondary">T</div>
+                        <div>
+                            <p class="font-bold">Thomas R.</p>
+                            <p class="text-sm text-gray">26 ans</p>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p class="testimonial-text">"Le truc des remboursements c'est trop bien. Avant je comprenais jamais
+                        rien, là je vois tout direct sur l'app. Et le notif quand c'est remboursé > tout."</p>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar bg-primary">S</div>
+                        <div>
+                            <p class="font-bold">Sarah K.</p>
+                            <p class="text-sm text-gray">21 ans</p>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p class="testimonial-text">"J'ai trouvé un dermato conventionné en 2 clics alors que ça faisait des
+                        mois que je cherchais. RDV pris en 10 sec. Alma vous êtes des génies 😭💜"</p>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="avatar bg-secondary">M</div>
+                        <div>
+                            <p class="font-bold">Maxime D.</p>
+                            <p class="text-sm text-gray">24 ans</p>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                    </div>
+                    <p class="testimonial-text">"Mon historique médical au même endroit, mes ordonnances accessibles,
+                        mes remboursements clairs... C'est exactement ce qu'il me fallait. Simple et efficace."</p>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <p class="stat-value">12K+</p>
+                    <p class="stat-label">Utilisateurs actifs</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-value">4.9</p>
+                    <p class="stat-label">Note sur l'App Store</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-value">98%</p>
+                    <p class="stat-label">Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-value">&lt;2min</p>
+                    <p class="stat-label">Temps moyen de RDV</p>
+                </div>
+            </div>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <div class="badge-icon bg-accent-light text-secondary"><i data-lucide="shield"></i></div>
+                    <div>
+                        <p class="font-bold">Données sécurisées</p>
+                        <p class="text-sm text-gray">Chiffrement de bout en bout</p>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="badge-icon bg-accent-light text-secondary"><i data-lucide="award"></i></div>
+                    <div>
+                        <p class="font-bold">Certifié HDS</p>
+                        <p class="text-sm text-gray">Hébergeur de données de santé</p>
+                    </div>
+                </div>
+                <div class="trust-badge">
+                    <div class="badge-icon bg-accent-light text-secondary"><i data-lucide="heart"></i></div>
+                    <div>
+                        <p class="font-bold">100% français</p>
+                        <p class="text-sm text-gray">Conçu et hébergé en France</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="partners">
+                <p class="text-sm text-gray mb-6">Ils nous font confiance</p>
+                <div class="partners-list">
+                    <div class="partner"><span>📅</span> Doctolib</div>
+                    <div class="partner"><span>💊</span> Pharmacie.fr</div>
+                    <div class="partner"><span>🏥</span> Ameli</div>
+                    <div class="partner"><span>💜</span> Alan</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-bg-gradient"></div>
+        <div class="cta-blobs">
+            <div class="blob-white-1"></div>
+            <div class="blob-teal-1"></div>
+        </div>
+
+        <div class="container relative z-10">
+            <div class="cta-content text-center">
+                <span class="badge-pill-white">Prêt à commencer ?</span>
+                <h2 class="cta-title">
+                    Télécharge Alma <br>
+                    <span class="relative">
+                        gratuitement
+                        <svg class="underline-svg" viewBox="0 0 200 12" fill="none">
+                            <path d="M2 10C50 2 150 2 198 10" stroke="white" stroke-width="3" stroke-linecap="round"
+                                opacity="0.5" />
+                        </svg>
+                    </span> <br>
+                    et simplifie ta santé
+                </h2>
+                <p class="cta-subtitle">Rejoins les milliers de jeunes qui ont déjà dit bye aux galères de santé. C'est
+                    100% gratuit, sans engagement.</p>
+
+                <div class="cta-buttons">
+                    <button class="btn btn-white btn-lg">
+                        <i data-lucide="apple" class="mr-2"></i>
+                        <div class="text-left">
+                            <p class="text-xs opacity-70">Télécharger sur</p>
+                            <p class="font-semibold">App Store</p>
+                        </div>
+                    </button>
+                    <button class="btn btn-outline-white btn-lg">
+                        <i data-lucide="smartphone" class="mr-2"></i>
+                        <div class="text-left">
+                            <p class="text-xs opacity-70">Disponible sur</p>
+                            <p class="font-semibold">Google Play</p>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="cta-trust">
+                    <span>✓ Inscription en 30 sec</span>
+                    <span>✓ 100% gratuit</span>
+                    <span>✓ Sans engagement</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo mb-4">
+                        <div class="logo-icon"><span class="logo-text-icon">A</span></div>
+                        <span class="logo-text">Alma</span>
+                    </div>
+                    <p class="text-gray mb-6">La mutuelle qui s'adapte à ta vie. Simple, claire, humaine. Parce que la
+                        santé, ça devrait jamais être compliqué.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-btn"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-btn"><i data-lucide="twitter"></i></a>
+                        <a href="#" class="social-btn"><i data-lucide="linkedin"></i></a>
+                    </div>
+                    <div class="contact-info mt-6">
+                        <div class="contact-item"><i data-lucide="mail"></i> hello@alma-sante.fr</div>
+                        <div class="contact-item"><i data-lucide="phone"></i> 01 23 45 67 89</div>
+                        <div class="contact-item"><i data-lucide="map-pin"></i> Paris, France 🇫🇷</div>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Produit</h4>
+                    <a href="#features">Fonctionnalités</a>
+                    <a href="#pricing">Tarifs</a>
+                    <a href="#faq">FAQ</a>
+                    <a href="#testimonials">Témoignages</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Entreprise</h4>
+                    <a href="#">À propos</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Carrières</a>
+                    <a href="#">Presse</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Légal</h4>
+                    <a href="#">CGU</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2024 Alma. Tous droits réservés. Fait avec 💜 à Paris.</p>
+                <div class="store-badges">
+                    <a href="#">🍎 App Store</a>
+                    <a href="#">🤖 Google Play</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
